@@ -1,0 +1,14 @@
+
+<!-- header navbar -->
+<app-header ></app-header>
+<!-- home bannar/slider -->
+<app-bannar *ngIf="router.url=='/'"></app-bannar>
+<!-- featured of courses -->
+<app-course-featured *ngIf="router.url=='/'"></app-course-featured>
+<router-outlet></router-outlet>
+<!-- footer -->
+<app-footer *ngIf="router.url!=='/registration'"></app-footer>
+
+
+<!-- <router-outlet></router-outlet> -->
+

@@ -1,0 +1,8 @@
+a{
+    text-decoration: none;
+    color: rgb(110, 110, 110);
+}
+ul li{
+    list-style: none;
+    margin: 5px 0px;
+}
