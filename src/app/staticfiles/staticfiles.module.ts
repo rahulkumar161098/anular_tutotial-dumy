@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { StaticfilesRoutingModule } from './staticfiles-routing.module';
 import { PageComponent } from './page/page.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FormsModule, ReactiveFormsModule,  } from '@angular/forms'
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   ],
   imports: [
     CommonModule,
-    StaticfilesRoutingModule
+    StaticfilesRoutingModule,
+    ReactiveFormsModule,
   ]
 })
 export class StaticfilesModule { }

@@ -11,4 +11,9 @@ export class ServiceService {
   userRegister(data:any){
     return this.http.post<any>('http://localhost:3000/UserLogin/', data)
   }
+
+  getdata(){
+    return this.http.get<any>('http://127.0.0.1:8000/api/employee/')
+    
+  }
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+// import { ServiceService } from './service.service'
 
 import { CoursesRoutingModule } from './courses-routing.module';
 import { CourseFeaturedComponent } from './course-featured/course-featured.component';
@@ -17,12 +18,14 @@ import { MatButtonModule,  } from '@angular/material/button';
     CourseListComponent,
     CourseDetailsComponent,
     CourseRecentComponent,
-    CourseCategoryComponent
+    CourseCategoryComponent,
+    // ServiceService
   ],
   imports: [
     CommonModule,
     CoursesRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    
   ],
   exports:[
     CourseFeaturedComponent

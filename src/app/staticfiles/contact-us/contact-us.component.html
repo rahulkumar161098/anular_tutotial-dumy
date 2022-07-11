@@ -1,22 +1,26 @@
 <div class="container">
     <h3>Contact Us</h3>
     <hr>
-    <form>
+    <form [formGroup]="c_form" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="exampleInputEmail1">Name</label>
-            <input type="text" class="form-control" aria-describedby="emailHelp">
+            <input type="text" class="form-control" formControlName="name">
         </div>
+        <span *ngIf="name && name.invalid && name.touched" style="color:tomato; font-size:12px">This field is invalid</span>
+
         <br>
         <div class="form-group">
             <label for="exampleInputPassword1">Email</label>
-            <input type="email" class="form-control" aria-describedby="emailHelp">
+            <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp">
         </div>
+        <span *ngIf="email && email.invalid && email.touched" style="color:tomato; font-size:12px">This field is invalid</span>
         <br>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Mesage....</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" formControlName="msg" rows="3"></textarea>
         </div>
+        <span *ngIf="msg && msg.invalid && msg.touched" style="color:tomato; font-size:12px">This field is invalid</span>
         <br>
-        <button type="submit" class="btn btn-primary">Send</button>
+        <button type="submit" [disabled]="c_form.invalid"  class="btn btn-primary">Send</button>
     </form>
 </div>
